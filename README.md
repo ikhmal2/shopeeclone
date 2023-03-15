@@ -30,3 +30,5 @@ As the number of products increase, the UI/UX is getting more complex and too mu
 - TailWind CSS
 - Vue Router 4
 - Vuex
+
+## Screenshots
