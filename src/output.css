@@ -517,44 +517,20 @@ video {
   display: flex;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
 .justify-between {
   justify-content: space-between;
 }
 
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.bg-amber-500 {
+.bg-orange {
   --tw-bg-opacity: 1;
-  background-color: rgb(245 158 11 / var(--tw-bg-opacity));
+  background-color: rgb(237 165 0 / var(--tw-bg-opacity));
 }
 
 .p-5 {
   padding: 1.25rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.underline {
-  text-decoration-line: underline;
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
