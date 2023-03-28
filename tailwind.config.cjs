@@ -9,6 +9,7 @@ module.exports = {
         secondary: "#ff7337",
         text: "#333",
         secondary_text: "#808080",
+        cta: "#fb5533",
       },
     },
   },
