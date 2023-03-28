@@ -11,6 +11,9 @@ module.exports = {
         secondary_text: "#808080",
         cta: "#fb5533",
       },
+      fontFamily: {
+        "press-start": ['"Press Start 2P,"', "cursive"],
+      },
     },
   },
   plugins: [],
