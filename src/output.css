@@ -634,11 +634,6 @@ video {
   --tw-gradient-to: #ff7337;
 }
 
-.decoration-slice {
-  -webkit-box-decoration-break: slice;
-          box-decoration-break: slice;
-}
-
 .fill-white {
   fill: #fff;
 }
@@ -665,10 +660,6 @@ video {
   padding-right: 1rem;
 }
 
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
 .font-press-start {
   font-family: "Press Start 2P,", cursive;
 }
@@ -689,10 +680,6 @@ video {
 
 .line-through {
   text-decoration-line: line-through;
-}
-
-.decoration-black {
-  text-decoration-color: #000;
 }
 
 .shadow-lg {
