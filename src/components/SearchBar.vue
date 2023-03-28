@@ -5,14 +5,17 @@ export default {
 </script>
 
 <template>
-    <div class="shadow-xl w-3/5">
-        <div class="shopee-searchbar__main">
-            <form role="search" class="shopee-searchbar-input" autocomplete="off"><input
-                    aria-label="Sign Up &amp; Get RM18 Off Voucher!" class="shopee-searchbar-input__input" maxlength="128"
-                    placeholder="Sign Up &amp; Get RM18 Off Voucher!" autocomplete="off" aria-autocomplete="list"
-                    aria-controls="shopee-searchbar-listbox" aria-expanded="false" role="combobox" value=""></form>
-        </div><button type="button" class="btn btn-solid-primary btn--s btn--inline shopee-searchbar__search-button"><svg
-                height="19" viewBox="0 0 19 19" width="19" class="shopee-svg-icon">
+    <div class="shadow-lg w-3/5 flex items-stretch justify-between h-10 px-4 rounded-sm bg-white">
+        <div class="flex flex-1">
+            <form role="search" class="bg-white border-white flex flex-1 box-border p-[.625rem] relative">
+                <input class="flex flex-1 items-center border-none h-full" aria-label="Sign Up &amp; Get RM18 Off Voucher!"
+                    maxlength="128" placeholder="Sign Up &amp; Get RM18 Off Voucher!" value="">
+            </form>
+        </div>
+        <button
+            class="relative overflow-visible outline-none bg-cta h-4/5 px-4 min-w-[3.75rem] max-w-[11.875rem] self-center flex justify-center"
+            type="button">
+            <svg height="19" viewBox="0 0 19 19" width="19" class="self-center fill-white">
                 <g fill-rule="evenodd" stroke="none" stroke-width="1">
                     <g transform="translate(-1016 -32)">
                         <g>
