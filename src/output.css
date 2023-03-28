@@ -525,16 +525,16 @@ video {
   display: flex;
 }
 
-.inline-flex {
-  display: inline-flex;
-}
-
 .h-10 {
   height: 2.5rem;
 }
 
 .h-4\/5 {
   height: 80%;
+}
+
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-full {
@@ -545,16 +545,16 @@ video {
   width: 60%;
 }
 
-.min-w-\[60px\] {
-  min-width: 60px;
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .min-w-\[3\.75rem\] {
   min-width: 3.75rem;
-}
-
-.max-w-\[190px\] {
-  max-width: 190px;
 }
 
 .max-w-\[11\.875rem\] {
@@ -610,14 +610,14 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-cta {
   --tw-bg-opacity: 1;
   background-color: rgb(251 85 51 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-b {
@@ -634,8 +634,17 @@ video {
   --tw-gradient-to: #ff7337;
 }
 
+.decoration-slice {
+  -webkit-box-decoration-break: slice;
+          box-decoration-break: slice;
+}
+
 .fill-white {
   fill: #fff;
+}
+
+.stroke-white {
+  stroke: #fff;
 }
 
 .p-5 {
@@ -656,6 +665,14 @@ video {
   padding-right: 1rem;
 }
 
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-press-start {
+  font-family: "Press Start 2P,", cursive;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -670,6 +687,14 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.line-through {
+  text-decoration-line: line-through;
+}
+
+.decoration-black {
+  text-decoration-color: #000;
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -681,7 +706,7 @@ video {
   outline-offset: 2px;
 }
 
-.hover\:text-secondary_text:hover {
-  --tw-text-opacity: 1;
-  color: rgb(128 128 128 / var(--tw-text-opacity));
+.hover\:bg-secondary_text:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 128 128 / var(--tw-bg-opacity));
 }
