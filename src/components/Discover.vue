@@ -3,17 +3,30 @@
         <h2 class="border-primary border-b-4 text-center py-3 font-bold text-2xl">DAILY DISCOVER</h2>
     </div>
 
-    <div v-for="product in products" :key="product.id">
-        <div class="pb-5 w-1/3 float-left">
-            <div
-                class="bg-white transition-all duration-[0.5s] w-[calc(100%+20px)] float-left mx-0 my-[10px] cursor-pointer border-solid border-secondary_text">
+    <div class="product-container">
+        <div v-for="product in products" :key="product.id"
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+            <a href="#">
+                <img class="p-8 rounded-t-lg w-80 h-80 object-contain" :src="product.image" alt="product image" />
+            </a>
+            <div class="px-5 pb-5">
                 <a href="#">
-                    <div class="relative h-72">
-                        <div>
-                            <img :src='product.image'>
-                        </div>
-                    </div>
+                    <h5 class="truncate text-xl font-semibold tracking-tight text-gray-900 ">
+                        {{ product.title }}
+                        <span
+                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">{{
+                                product.rating.rate }}
+                        </span>
+                    </h5>
+
                 </a>
+
+                <div class="inline-flex gap-4 flex-col justify-between">
+                    <span class="text-3xl font-bold text-gray-900dark:text-white">RM{{ product.price }}</span>
+                    <a href="#"
+                        class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Add
+                        to cart</a>
+                </div>
             </div>
         </div>
     </div>
@@ -38,4 +51,11 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 1.25rem;
+    padding: 2rem;
+}
+</style>
