@@ -4,7 +4,6 @@ import axios from 'axios';
 export default createStore({
   state: {
     productList: [],
-    testvalue: 'mak lancau',
   },
   mutations: {
     addProduct(state, newProduct) {
