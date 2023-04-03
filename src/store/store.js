@@ -1,25 +1,32 @@
-import { createStore } from "vuex";
-import axios from "axios";
+import { createStore } from 'vuex';
+import axios from 'axios';
 
 export default createStore({
   state: {
     productList: [],
+    testvalue: 'mak lancau',
   },
   mutations: {
     addProduct(state, newProduct) {
-      state.productList.push(newProduct);
+      for (let i = 0; i < newProduct.length; i++) {
+        const prod = newProduct[i];
+        state.productList.push(prod);
+      }
     },
   },
   actions: {
     fetchProducts({ commit }) {
-      axios("https://fakestoreapi.com/products").then((response) => {
-        commit("addProduct", response.data);
+      axios('https://fakestoreapi.com/products').then((response) => {
+        commit('addProduct', response.data);
       });
     },
   },
   getters: {
     getProducts(state) {
       return state.productList;
+    },
+    getTotalProducts(state) {
+      return state.productList.length;
     },
   },
 });
