@@ -13,16 +13,22 @@
                 <a href="#">
                     <h5 class="truncate text-xl font-semibold tracking-tight text-gray-900 ">
                         {{ product.title }}
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-2">{{
-                                product.rating.rate }}
-                        </span>
+
                     </h5>
 
                 </a>
 
                 <div class="inline-flex gap-4 flex-col justify-between">
                     <span class="text-3xl font-bold text-gray-900dark:text-white">RM{{ product.price }}</span>
+                    <div class="flex">
+                        <span class="text-blue-800 text-m font-semibold  rounded  h-6">
+                            {{ product.rating.count }} sold
+                        </span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ml-2 h-6">{{
+                            product.rating.rate }} stars
+                        </span>
+                    </div>
+
                     <a href="#"
                         class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Add
                         to cart</a>
