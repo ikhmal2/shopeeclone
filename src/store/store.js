@@ -5,6 +5,7 @@ export default createStore({
   state: {
     productList: [],
     categories: [],
+    cart: [],
   },
   mutations: {
     addProduct(state, newProduct) {
@@ -19,6 +20,7 @@ export default createStore({
         state.categories.push(category);
       }
     },
+    addCart(state) {},
   },
   actions: {
     fetchProducts({ commit }) {
