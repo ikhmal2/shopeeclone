@@ -20,7 +20,9 @@ export default createStore({
         state.categories.push(category);
       }
     },
-    addCart(state) {},
+    addCart(state, product) {
+      state.cart.push(product);
+    },
   },
   actions: {
     fetchProducts({ commit }) {
@@ -32,6 +34,9 @@ export default createStore({
       axios('https://fakestoreapi.com/products/categories').then((response) => {
         commit('addCategories', response.data);
       });
+    },
+    addToCart({ commit }) {
+      commit('addCart', 1);
     },
   },
   getters: {
@@ -46,6 +51,9 @@ export default createStore({
     },
     getTotalCategories(state) {
       return state.categories.length;
+    },
+    getTotalCart(state) {
+      return state.cart.length;
     },
   },
 });
