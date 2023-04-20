@@ -4,8 +4,8 @@
     </div>
 
     <div class="product-container">
-        <div v-for="product in products" :key="product.id"
-            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+        <div v-for="product in products" :key="product.id" :prodID="product.id"
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
             <a href="#">
                 <img class="p-8 rounded-t-lg w-80 h-80 object-contain" :src="product.image" alt="product image" />
             </a>
@@ -29,9 +29,9 @@
                         </span>
                     </div>
 
-                    <a href="#"
+                    <button @click="addCart"
                         class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Add
-                        to cart</a>
+                        to cart</button>
                 </div>
             </div>
         </div>
@@ -49,6 +49,9 @@ export default {
     methods: {
         getProducts() {
             this.$store.dispatch('fetchProducts');
+        },
+        addCart() {
+            this.$store.dispatch('addToCart');
         }
     },
     beforeMount() {
